@@ -1,4 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@469;600&display=swap');
+#Slider
+{
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, san-serif;
+    height: 100%;
+    margin: 0;
+    background-color: orange;
+}
+
+#cover
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 350px;
+    margin: 0 auto;
+    background-color: #F1F3F6;
+    border-radius: 20px;
+    transform: translateY(-50%);
+}
+
+#heading
+{
+    margin: 0;
+    padding: 20px;
+}
+
+#options
+{
+    padding: 0 20px 20px;
+}
+
+.option
+{
+    position: relative;
+    font-size: 14px;
+    line-height: 1;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.option:last-child
+{
+    margin-bottom: 0;
+}
+
+.option:before, .option:after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+}
+
+.option:before
+{
+    left: -34px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.option:after
+{
+    left: 0;
+    background-color: white;
+}
+
+.option.active:before
+{
+    animation: increaseWidth 0.6s ease 0s forwards, moveToRight 0.3s ease 0.3s forwards;
+}
+
+.option.nonactive:before {
+    animation: increaseWidth_1 0.6s ease 0s forwards, moveToLeft 0.3s ease 0s forwards;
+}
+
+@keyframes increaseWidth
+{
+    0%{ width: 14px; }
+    50%{ width: 48px; }
+    100%{ width: 14px; }
+}
+
+@keyframes moveToRight
+{
+    0%{ left: -34px; }
+    100%{ left: 0; }
+}
+
+@keyframes increaseWidth_1 
+{
+    0%{ width: 14px; }
+    50%{ width: 48px; }
+    100%{ width: 14px; }
+}
+
+@keyframes moveToLeft
+{
+    0%{ left: 0; }
+    100%{ left: -34px; }
+}
+
+/*@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@469;600&display=swap');
 
 #container {
   background-color: #ECF0F3;
@@ -8,12 +113,12 @@
   align-items: center;
   text-align: left;
   display: inline-block;
-  margin-left: 28%;
-  border-radius: 4%;
+  margin-left: 20%;
+  border-radius: 24px;
   margin-top: 6%;
   margin-bottom: 6%;
-  height: 400px;
-  width: 600px;
+  height: 60vh;
+  width: 60%;
   background-color: white;
   border: 0px solid;
   padding: 10px;
@@ -25,24 +130,30 @@
   color: white;
 }
 
-#container .question-card1 h4
+#container .color-gradient h4
 {
-    margin-left: 30px;
-    margin-top: 20px;
-    font-size: 40px;
+    margin-left: 7%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-right: 3%;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .color-gradient
 {
-    background-image: linear-gradient(to bottom left, #fd3f42, yellow);  
+    background-image: linear-gradient(to top left, #fd3f42, yellow);  
     border-radius: 20px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    margin-top: -2%;
-    margin-left: -1.8%;
-    margin-right: -1.7%;
-    padding-bottom: 9%;
+/*    margin-top: -2% */
+/*    margin-left: -6%;
+    margin-right: -6%;
+    margin-bottom: -7%;
+    margin-top: -6%;
+    height: 60vh;
+    width: 60%;
 }
-
+*/
 
 
